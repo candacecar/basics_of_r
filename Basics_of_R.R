@@ -316,7 +316,30 @@ is.null(d)
 
 is.null(7)
 
+## LAB 1
 
+## a)	Create a factor variable called days that contains the days of the week. 
+## Your factor variable days should be ordered such that Sunday is the first day, 
+## Monday is the second day, etc. 
+## Levels correspond to the order of the days of the week. 
+## Now test whether this variable is truly a factor or not? 
 
+factor(days <-c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
+                "Saturday"),
+       levels=c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", 
+                "Saturday"),
+       ordered=TRUE)
+days
 
+## b)	Create a vector of numbers from one to ten called num_vec. 
+## Use the sum function to calculate the sum of this vector using both the 
+## sum function directly applied to the vector, and the magrittr pipe command 
+## to “pipe” the function to the vector. 
 
+num_vec <- 1:10
+
+sum(num_vec)
+
+library(magrittr)
+
+num_vec %>% sum
